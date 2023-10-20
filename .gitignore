@@ -1,0 +1,7 @@
+SimpleFriq.csproj
+obj/project.assets.json
+obj/project.nuget.cache
+obj/SimpleFriq.csproj.nuget.dgspec.json
+obj/SimpleFriq.csproj.nuget.g.props
+obj/SimpleFriq.csproj.nuget.g.targets
+README.md
