@@ -1,13 +1,23 @@
 class CountFrequancy{
 
-    Dictionary Count = new Dictionary<string, int>();
-    string alphabeth = "abcdefghijklmnopqrstuvwxyz";
-
-    public Dictionary<string, int> CountFre (string text)
+    public Dictionary<string, int> CountLetters(string text)
     {
+        Dictionary count = new Dictionary<string, int>{(a, 0), (b, 0), (d, 0), (e, 0), (f, 0), (g, 0), (h, 0), (i, 0),
+                                                        (j, 0), (k, 0), (l, 0), (m, 0), (n, 0), (o, 0), (p, 0), (r, 0),
+                                                        (s, 0), (t, 0), (u, 0), (v, 0), (w, 0), (x, 0), (y, 0), (z, 0),};
+        int totalLetters = 0;
+
         text.ToLower();
 
-        
+        foreach (char letter in text)
+        {
+            if (count.Contains(letter))
+            {
+                count[letter]++;
+                total++;
+            }
+        }
+
     }
 
 
