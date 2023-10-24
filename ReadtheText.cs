@@ -4,7 +4,7 @@ class ReadText {
 
 String line;
 
-public string ReadFile (string adressText){
+public string ReadFile(string adressText){
 
 var text = "";
 
@@ -19,22 +19,18 @@ try
     while (line != null)
     {
         //write the line to console window
-        Console.WriteLine(line);
+        //Console.WriteLine(line);
         //Read the next line
         line = sr.ReadLine();
         text += line;
     }
     //close the file
     sr.Close();
-    Console.ReadLine();
+    //Console.ReadLine();
 }
 catch(Exception e)
 {
     Console.WriteLine("Exception: " + e.Message);
-}
-finally
-{
-    Console.WriteLine("Executing finally block.");
 }
 
 return text;

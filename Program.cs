@@ -2,8 +2,8 @@
 {
     static void Main(string[]args)
     {
-        var sherlockText = new ReadText();
-        var text = sherlockText.ReadFile("/Users/valeriia/MyProjects/Simple-Frequency-/SherlockHolmes.rtf");
+        var frequency = new Application();
+        var sherlockFrequency = frequency.Execute("/Users/valeriia/MyProjects/Simple-Frequency-/SherlockHolmes.rtf");
     }
     
 }
