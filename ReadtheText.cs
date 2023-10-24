@@ -4,14 +4,14 @@ class ReadText {
 
 String line;
 
-public string ReadText (string adressText) 
+public string ReadFile (string adressText){
 
 var text = "";
 
 try
 {
     //Pass the file path and file name to the StreamReader constructor
-    StreamReader sr = new StreamReader(adress);
+    StreamReader sr = new StreamReader(adressText);
     //Read the first line of text
     line = sr.ReadLine();
     text += line;
@@ -38,5 +38,5 @@ finally
 }
 
 return text;
-
+}
 }
