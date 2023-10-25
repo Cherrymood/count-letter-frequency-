@@ -13,4 +13,19 @@ class EnglishAlphabetFreq
             {'k', 1.10}, {'v', 1.00}, {'x', 0.29}, {'z', 0.29}, {'j', 0.19}, {'q', 0.19}
         };
     }
+
+    public Dictionary<char, double> CompareEnglishDict(Dictionary<char, double> dict1, Dictionary<char, double> dict2)
+    {
+        this.dict1 = conciseOxfordDictionary;
+
+        var answer = new Dictionary<char, int>();
+
+        // Count letters in text
+        foreach (var kvp in dict1)
+        {
+            answer[kvp.Key] = dict1[kvp.Key] - dict2[kvp.Key];
+        }
+
+        return answer;
+    }
 }
