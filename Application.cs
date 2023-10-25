@@ -17,15 +17,25 @@ class Application{
 
     }
 
-    public void Execute(string pathText)
+    public Dictionary<char, double> Execute(string pathText)
     {
         var text = textToCompare.ReadFile(pathText);
+
         var textFreq = freqText.Count(text);
-        var compareText = compareText.CompareEnglishDict(textFreq);
+
+        var compare = compareText.CompareEnglishDict(textFreq);
+
         // Return the textFreq dictionary
-        foreach (var kvp in compareText)
+        Console.WriteLine("textFreq dictionary");
+        foreach (var kvp in textFreq)
         {
             Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
         }
+        Console.WriteLine("Compare extFreq");
+        foreach (var kvp in compare)
+        {
+            Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
+        }
+        return compare; 
     }
 }

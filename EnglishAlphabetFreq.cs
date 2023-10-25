@@ -2,28 +2,23 @@ class EnglishAlphabetFreq
 {
     Dictionary<char, double> conciseOxfordDictionary;
 
-    public EnglishAlphabetFreq()
+    public Dictionary<char, double> CompareEnglishDict(Dictionary<char, double> dict)
     {
         conciseOxfordDictionary = new Dictionary<char, double>()
         {
-            {'a', 43.31}, {'e', 11.16}, {'r', 7.58}, {'i', 7.54}, {'o', 7.16},
-            {'t', 6.95}, {'n', 6.65}, {'s', 5.73}, {'l', 5.47}, {'c', 4.53},
-            {'u', 3.63}, {'d', 3.38}, {'p', 3.16}, {'m', 3.01}, {'h', 3.01},
-            {'g', 2.47}, {'b', 2.07}, {'f', 1.18}, {'y', 1.77}, {'w', 1.28},
-            {'k', 1.10}, {'v', 1.00}, {'x', 0.29}, {'z', 0.29}, {'j', 0.19}, {'q', 0.19}
+            {'a', 0.43}, {'e', 0.11}, {'r', 0.75}, {'i', 0.07}, {'o', 0.0716},
+            {'t', 0.69}, {'n', 0.06}, {'s', 0.57}, {'l', 0.05}, {'c', 0.0453},
+            {'u', 0.36}, {'d', 0.03}, {'p', 0.31}, {'m', 0.03}, {'h', 0.0301},
+            {'g', 0.24}, {'b', 0.02}, {'f', 0.01}, {'y', 0.01}, {'w', 0.0128},
+            {'k', 0.11}, {'v', 0.01}, {'x', 0.029}, {'z', 0.0029}, {'j', 0.0019}, {'q', 0.0019}
         };
-    }
 
-    public Dictionary<char, double> CompareEnglishDict(Dictionary<char, double> dict1, Dictionary<char, double> dict2)
-    {
-        this.dict1 = conciseOxfordDictionary;
-
-        var answer = new Dictionary<char, int>();
+        var answer = new Dictionary<char, double>();
 
         // Count letters in text
-        foreach (var kvp in dict1)
+        foreach (var kvp in dict)
         {
-            answer[kvp.Key] = dict1[kvp.Key] - dict2[kvp.Key];
+            answer[kvp.Key] = conciseOxfordDictionary[kvp.Key] - dict[kvp.Key];
         }
 
         return answer;

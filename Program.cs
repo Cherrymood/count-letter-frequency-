@@ -2,8 +2,8 @@
 {
     static void Main(string[]args)
     {
-        var frequency = new Application();
-        var sherlockFrequency = frequency.Execute("/Users/valeriia/MyProjects/Simple-Frequency-/SherlockHolmes.rtf");
+        var freq1 = new Application();
+        var sherlockFrequency = freq1.Execute("/Users/valeriia/MyProjects/Simple-Frequency-/SherlockHolmes.rtf");
     }
     
 }
